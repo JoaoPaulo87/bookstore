@@ -1,35 +1,43 @@
-package com.bookstore.bookstore.model;
+package com.bookstore.model;
 
-public class AuthenticationRequest {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "user")
+public class DAOUser {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column
     private String username;
+    @Column
     private String password;
+    @Column
+    private String role;
 
-
-    public AuthenticationRequest(String username, String password) {
-        super();
-        this.username = username;
-        this.password = password;
+    public String getRole() {
+        return role;
     }
 
-    public AuthenticationRequest()
-    {
-
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getUsername() {
         return username;
     }
+
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
-
-
 
 }

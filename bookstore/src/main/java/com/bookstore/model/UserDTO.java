@@ -1,19 +1,8 @@
-package com.bookstore.bookstore.model;
+package com.bookstore.model;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "user")
-public class DAOUser {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column
+public class UserDTO {
     private String username;
-    @Column
     private String password;
-    @Column
     private String role;
 
     public String getRole() {

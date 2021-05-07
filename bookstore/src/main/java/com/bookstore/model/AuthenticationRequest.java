@@ -1,35 +1,35 @@
-package com.bookstore.bookstore.model;
+package com.bookstore.model;
 
-import javax.persistence.Entity;
+public class AuthenticationRequest {
 
-@Entity
-public class UserDTO {
     private String username;
     private String password;
-    private String role;
 
-    public String getRole() {
-        return role;
+
+    public AuthenticationRequest(String username, String password) {
+        super();
+        this.username = username;
+        this.password = password;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public AuthenticationRequest()
+    {
+
     }
 
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 
 }

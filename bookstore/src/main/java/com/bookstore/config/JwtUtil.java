@@ -1,4 +1,4 @@
-package com.bookstore.bookstore.config;
+package com.bookstore.config;
 
 import java.util.Arrays;
 import java.util.Collection;

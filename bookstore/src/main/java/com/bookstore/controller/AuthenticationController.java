@@ -1,5 +1,8 @@
-package com.bookstore.bookstore.controller;
+package com.bookstore.controller;
 
+import com.bookstore.config.CustomUserDetailsService;
+import com.bookstore.config.JwtUtil;
+import com.bookstore.model.AuthenticationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,11 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bookstore.bookstore.config.CustomUserDetailsService;
-import com.bookstore.bookstore.config.JwtUtil;
-import com.bookstore.bookstore.model.AuthenticationRequest;
-import com.bookstore.bookstore.model.AuthenticationResponse;
-import com.bookstore.bookstore.model.UserDTO;
+import com.bookstore.model.AuthenticationResponse;
+import com.bookstore.model.UserDTO;
 
 @RestController
 public class AuthenticationController {

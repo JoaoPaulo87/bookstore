@@ -1,4 +1,4 @@
-package com.bookstore.bookstore.config;
+package com.bookstore.config;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.bookstore.bookstore.model.DAOUser;
-import com.bookstore.bookstore.model.UserDTO;
-import com.bookstore.bookstore.repository.UserRepository;
+import com.bookstore.model.DAOUser;
+import com.bookstore.model.UserDTO;
+import com.bookstore.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

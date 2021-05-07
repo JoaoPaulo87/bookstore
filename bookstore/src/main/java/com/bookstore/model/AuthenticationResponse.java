@@ -1,4 +1,4 @@
-package com.bookstore.bookstore.model;
+package com.bookstore.model;
 
 public class AuthenticationResponse {
 
