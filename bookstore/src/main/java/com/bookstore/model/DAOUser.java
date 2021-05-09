@@ -1,6 +1,7 @@
 package com.bookstore.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -15,6 +16,9 @@ public class DAOUser {
     private String password;
     @Column
     private String role;
+    @OneToMany
+    @JoinColumn(name="user_id")
+    private List<DAOBook> bookList;
 
     public String getRole() {
         return role;
@@ -39,5 +43,9 @@ public class DAOUser {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public List<DAOBook> getBookList() { return bookList; }
+
+    public void setBookList(List<DAOBook> bookList) { this.bookList = bookList; }
 
 }
